@@ -1,0 +1,6 @@
+framework module PiQAlike {
+  umbrella header "PiQAlike.h"
+
+  export *
+  module * { export * }
+}
