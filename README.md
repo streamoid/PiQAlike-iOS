@@ -68,9 +68,9 @@ Build and run your project to verify installation was successful. Once you have 
 
 Once you have finished installing PiQAlike via CocoaPods or framework, you can test your configuration by importing the headers and connecting a client to the PiQAlike cloud. To do so, edit your application delegate to include the code below (note that you must substitute the client name and token placeholder text with your actual values):
 
+```sh
 #import <PiQAlike/PiQAlike.h>
 
-```sh
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 [PiQAlikeClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
