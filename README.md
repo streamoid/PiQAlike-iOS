@@ -9,7 +9,7 @@ If you have any questions, comments, or issues related to PiQAlike, Please conta
 PiQAlike is an iOS SDK for visual search recommendations in fashion. PiQAlike SDK provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native iOS applications.
 
 - what is visual search in fashion ?
--  That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using PiQAlike SDK.
+- That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using PiQAlike SDK.
 
 ### Installation
 
