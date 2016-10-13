@@ -1,0 +1,1 @@
+../../../../PiQAlike/PiQAlike.framework/Headers/PiQAlikeClient.h
