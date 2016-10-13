@@ -25,7 +25,7 @@
 }
 
 - (IBAction)cameraButtonClicked:(id)sender {
-    [[PiQAlikeClient sharedClient] showIRScreen];
+    [[PiQAlikeClient sharedClient] showIRScreenWithDetails:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
