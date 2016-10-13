@@ -60,7 +60,7 @@ Build and run your project to verify installation was successful. Once you have 
 - In iOS10 and Xcode 8, Apple requires permission to use came and photo library. So, the following must be added to your info.plist filte to use camera and photo library:
 ```sh 
 <key>Privacy - Camera Usage Description</key>
-<value>Uses Camea </value>
+<value>Uses Camera </value>
 
 <key>Privacy - Photo Library Usage Description</key>
 <value>Uses Photo Library </value>
