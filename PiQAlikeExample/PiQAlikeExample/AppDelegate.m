@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import <PiQAlike/PiQAlike.h>
 
+#define CLIENT_NAME @"Replace this with your company name"
+#define CLIENT_TOKEN @"Replace this with your token"
+
 @interface AppDelegate ()
 
 @end
@@ -18,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [PiQAlikeClient initializeWithClientName:@"abof" andClientToken:@"2a7895fb-0a90-404c-b355-e5796f5bf472"];
+    [PiQAlikeClient initializeWithClientName:CLIENT_NAME andClientToken:CLIENT_TOKEN];
     return YES;
 }
 
