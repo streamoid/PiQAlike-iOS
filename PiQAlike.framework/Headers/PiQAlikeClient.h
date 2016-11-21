@@ -98,13 +98,13 @@ extern NSString * _Nullable const kPiQAlikeCameraFlashOffIcon;
 extern NSString * _Nullable const kPiQAlikeCameraFlipIcon;
 
 /*!
- * @brief kPiQAlikeCropBackIcon -- Key used to pass crop view back icon's name to SDK.
+ * @brief kPiQAlikeCategoryBackIcon -- Key used to pass category view back icon's name to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeCropBackIcon];
+ * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeCategoryBackIcon];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeCropBackIcon;
+extern NSString * _Nullable const kPiQAlikeCategoryBackIcon;
 
 /*!
  * @brief kPiQAlikeCategorySelectIcon -- Key used to pass categoty selection icon's name to SDK.
@@ -116,13 +116,32 @@ extern NSString * _Nullable const kPiQAlikeCropBackIcon;
 extern NSString * _Nullable const kPiQAlikeCategorySelectIcon;
 
 /*!
- * @brief kPiQAlikeCategoryUnSelectIcon -- Key used to pass categoty un selection icon's name to SDK.
+ * @brief kPiQAlikeCategorySectionDownArrowIcon -- Key used to pass categoty section fown arrow icon's name to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeCategoryUnSelectIcon];
+ * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeCategorySectionDownArrowIcon];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeCategoryUnSelectIcon;
+extern NSString * _Nullable const kPiQAlikeCategorySectionDownArrowIcon;
+
+/*!
+ * @brief kPiQAlikeCategorySectionUpArrowIcon -- Key used to pass categoty section up arrow icon's name to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeCategorySectionUpArrowIcon];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeCategorySectionUpArrowIcon;
+
+/*!
+ * @brief kPiQAlikeLoaderIcon -- Key used to pass loader icon's name to SDK.
+ * If value not exists it will use the UIActivityIndicatorView.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"ICON_NAME" forKey:kPiQAlikeLoaderIcon];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeLoaderIcon;
 
 
 /*!
@@ -135,40 +154,68 @@ extern NSString * _Nullable const kPiQAlikeCategoryUnSelectIcon;
 extern NSString * _Nullable const kPiQAlikeBarHexColor;
 
 /*!
- * @brief kPiQAlikeTextHexColor -- Key used to pass text's hex color to SDK.
+ * @brief kPiQAlikePrimaryHexColor -- Key used to pass primary's hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeTextHexColor];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikePrimaryHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeTextHexColor;
+extern NSString * _Nullable const kPiQAlikePrimaryHexColor;
 
 /*!
- * @brief kPiQAlikeTextMediumFontName -- Key used to pass medium text's font name to SDK.
+ * @brief kPiQAlikeSecondaryHexColor -- Key used to pass secondary's hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"System Medium" forKey:kPiQAlikeTextMediumFontName];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSecondaryHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeTextMediumFontName;
+extern NSString * _Nullable const kPiQAlikeSecondaryHexColor;
 
 /*!
- * @brief kPiQAlikeTextRegularFontName -- Key used to pass regular text's font name to SDK.
+ * @brief kPiQAlikeButtonTitleHexColor -- Key used to pass all button's title hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"System Regular" forKey:kPiQAlikeTextRegularFontName];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeButtonTitleHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeTextRegularFontName;
+extern NSString * _Nullable const kPiQAlikeButtonTitleHexColor;
 
 /*!
- * @brief kPiQAlikeTextFontSize -- Key used to pass all text's font size to SDK.
+ * @brief kPiQAlikeSpinnerViewBackgroundHexColor -- Key used to pass spinner view's background hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"16" forKey:kPiQAlikeTextFontSize];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSpinnerViewBackgroundHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeTextFontSize;
+extern NSString * _Nullable const kPiQAlikeSpinnerViewBackgroundHexColor;
+
+/*!
+ * @brief kPiQAlikePrimaryFontName -- Key used to pass primary font name to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:[UIFont boldSystemFontOfSize:20] forKey:kPiQAlikePrimaryFontName];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikePrimaryFontName;
+
+/*!
+ * @brief kPiQAlikeSecondaryFontName -- Key used to pass secondary font name to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:[UIFont systemFontSize:15] forKey:kPiQAlikeSecondaryFontName];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeSecondaryFontName;
+
+/*!
+ * @brief kPiQAlikeIsFreeHandCrop -- Key used to pass crop type to SDK.
+ * If Yes it will enable freehand selector, else will enable rectangle selector
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:[NSNumber numberWithBool:YES] forKey:kPiQAlikeIsFreeHandCrop];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeIsFreeHandCrop;
 
 
 /*!
@@ -177,6 +224,9 @@ extern NSString * _Nullable const kPiQAlikeTextFontSize;
  */
 
 @interface PiQAlikeClient : NSObject
+
+typedef void (^PiQAlikeSearchSimilarCompletionBlock) (NSString* _Nullable responseString);
+typedef void (^PiQAlikeSearchSimilarFailureBlock)(NSError* _Nullable errorObj);
 
 /*!
  * @breif This method creates a shared instance object of a PiQAlikeClient class.
@@ -210,4 +260,20 @@ extern NSString * _Nullable const kPiQAlikeTextFontSize;
  */
 - (void)showIRScreenWithDetails:(NSDictionary * _Nullable)params;
 
+/*!
+ * @brief Call this method to get a list of visually similar products for a particular product
+ *
+ * @discussion
+ * Typically all of client's data is indexed by the visual search engine. So, client application can
+ * just pass the productID(unique identifier for a product according to client's data) as input param
+ * and in response string will passed in completionBlock. In case of failure, error object wil be passed
+ * in FailureBlock
+ *
+ * @param inProductID : The unique identifier of the product for which visually similar products are being fetched
+ * @param inCompletionBlock : When visually similar items are successfully fetched, the response Json object in string format
+ *                            is passed as input param in completionBlock's argument
+ * @param inFailureBlock : When fetching visually similar items fails for any reason, a NSError object is passed
+ *                         in failureBlock's argument
+ */
+- (void)getVisuallySimilarProductsFor:(NSString* _Nonnull)inProductID withCompletionBlock:(PiQAlikeSearchSimilarCompletionBlock _Nonnull)inCompletionBlock andFailureBlock:(PiQAlikeSearchSimilarFailureBlock _Nullable)inFailureBlock;
 @end
