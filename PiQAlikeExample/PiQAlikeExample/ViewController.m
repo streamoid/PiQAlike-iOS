@@ -41,6 +41,9 @@
     NSArray *resultsArray = (NSArray *)[notification.userInfo objectForKey:kPiQAlikeResponse];
     if (resultsArray.count == 0) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Success" message:[resultsArray componentsJoinedByString:@"\n"] preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
         [self presentViewController:alertController animated:YES completion:nil];
         return;
     }
@@ -55,6 +58,9 @@
     NSLog(@"%@",notification.userInfo);
     NSLog(@"%@",(NSString *)[notification.userInfo objectForKey:kPiQAlikeError]);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:(NSString *)[notification.userInfo objectForKey:kPiQAlikeError] preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
