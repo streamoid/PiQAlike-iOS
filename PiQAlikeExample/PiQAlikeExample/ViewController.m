@@ -38,6 +38,8 @@
 
 - (void)irResultsReceived:(NSNotification *)notification {
     NSLog(@"%@",notification.userInfo);
+    NSDictionary *filters = (NSDictionary *)[notification.userInfo objectForKey:kPiQAlikeFiltersApplied];
+    NSLog(@"Filters applied : %@",filters);
     NSArray *resultsArray = (NSArray *)[notification.userInfo objectForKey:kPiQAlikeResponse];
     if (resultsArray.count == 0) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Success" message:[resultsArray componentsJoinedByString:@"\n"] preferredStyle:UIAlertControllerStyleAlert];

@@ -35,6 +35,15 @@ extern NSString * _Nonnull const kPiQAlikeClientDidFailWithError;
 extern NSString * _Nullable const kPiQAlikeResponse;
 
 /*!
+ * @brief kPiQAlikeFiltersApplied -- Key for the filters applied to get IR Data which is in kPiQAlikeClientDidReceiveResponse notification's user info.
+ * @discussion - Use this constant as below.
+ * @code
+ * NSDictionary *filters = (NSDictionary *)[notification.userInfo objectForKey:kPiQAlikeFiltersApplied]
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeFiltersApplied;
+
+/*!
  * @brief kPiQAlikeError -- Key for the error description of IR API which is in kPiQAlikeClientDidFailWithError notification's user info.
  * @discussion - Use this constant as below.
  * @code
@@ -154,31 +163,76 @@ extern NSString * _Nullable const kPiQAlikeLoaderIcon;
 extern NSString * _Nullable const kPiQAlikeBarHexColor;
 
 /*!
- * @brief kPiQAlikePrimaryHexColor -- Key used to pass primary's hex color to SDK.
+ * @brief kPiQAlikeRetakeButtonTitleHexColor -- Key used to pass retake button's title hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikePrimaryHexColor];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeRetakeButtonTitleHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikePrimaryHexColor;
+extern NSString * _Nullable const kPiQAlikeRetakeButtonTitleHexColor;
 
 /*!
- * @brief kPiQAlikeSecondaryHexColor -- Key used to pass secondary's hex color to SDK.
+ * @brief kPiQAlikeRetakeButtonBackgroundHexColor -- Key used to pass retake button's background hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSecondaryHexColor];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeRetakeButtonBackgroundHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeSecondaryHexColor;
+extern NSString * _Nullable const kPiQAlikeRetakeButtonBackgroundHexColor;
 
 /*!
- * @brief kPiQAlikeButtonTitleHexColor -- Key used to pass all button's title hex color to SDK.
+ * @brief kPiQAlikeSearchButtonTitleHexColor -- Key used to pass search button's title hex color to SDK.
  * @discussion - Use this constant as below.
  * @code
- * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeButtonTitleHexColor];
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSearchButtonTitleHexColor];
  * @endCode
  */
-extern NSString * _Nullable const kPiQAlikeButtonTitleHexColor;
+extern NSString * _Nullable const kPiQAlikeSearchButtonTitleHexColor;
+
+/*!
+ * @brief kPiQAlikeSearchButtonBackgroundHexColor -- Key used to pass search button's background hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSearchButtonBackgroundHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeSearchButtonBackgroundHexColor;
+
+/*!
+ * @brief kPiQAlikeCategoryApplyButtonTitleHexColor -- Key used to pass category apply button's title hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeCategoryApplyButtonTitleHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeCategoryApplyButtonTitleHexColor;
+
+/*!
+ * @brief kPiQAlikeCategoryApplyButtonBackgroundHexColor -- Key used to pass category apply button's background hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeCategoryApplyButtonBackgroundHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeCategoryApplyButtonBackgroundHexColor;
+
+/*!
+ * @brief kPiQAlikeOverlayCancelButtonTitleHexColor -- Key used to pass overlay cancel button's title hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeOverlayCancelButtonTitleHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeOverlayCancelButtonTitleHexColor;
+
+/*!
+ * @brief kPiQAlikeOverlayCancelButtonBackgroundHexColor -- Key used to pass overlay cancel button's background hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeOverlayCancelButtonBackgroundHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeOverlayCancelButtonBackgroundHexColor;
 
 /*!
  * @brief kPiQAlikeSpinnerViewBackgroundHexColor -- Key used to pass spinner view's background hex color to SDK.
@@ -188,6 +242,42 @@ extern NSString * _Nullable const kPiQAlikeButtonTitleHexColor;
  * @endCode
  */
 extern NSString * _Nullable const kPiQAlikeSpinnerViewBackgroundHexColor;
+
+/*!
+ * @brief kPiQAlikeSpinnerViewTitleHexColor -- Key used to pass spinner view's title hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSpinnerViewTitleHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeSpinnerViewTitleHexColor;
+
+/*!
+ * @brief kPiQAlikeSpinnerViewTitleText -- Key used to pass spinner view's title text to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"Searching..." forKey:kPiQAlikeSpinnerViewTitleText];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeSpinnerViewTitleText;
+
+/*!
+ * @brief kPiQAlikeCategoryViewCategoryHexColor -- Key used to pass category's text hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeCategoryViewCategoryHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeCategoryHexColor;
+
+/*!
+ * @brief kPiQAlikeSubCategoryHexColor -- Key used to pass sub category's text hex color to SDK.
+ * @discussion - Use this constant as below.
+ * @code
+ * [dictionary setObject:@"COLOR_HEX" forKey:kPiQAlikeSubCategoryHexColor];
+ * @endCode
+ */
+extern NSString * _Nullable const kPiQAlikeSubCategoryHexColor;
 
 /*!
  * @brief kPiQAlikePrimaryFontName -- Key used to pass primary font name to SDK.
