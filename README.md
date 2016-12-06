@@ -48,7 +48,7 @@ Build and run your project to verify installation was successful. Once you have 
 
 ### Configuration
 - Disable App Transport Security(ATS) to support http : 
-- In iOS9 and Xcode 7, Apple requires that all network connections use https. This will not work for all ad creatives given to the SDK. So, the following must be added to your info.plist file to support http connections:
+- In iOS9 and Xcode 7, Apple requires that all network connections use https. This will block some of the http connections we are making inside framework. So, the following must be added to your info.plist file to support http connections:
 ```sh 
 <key>NSAppTransportSecurity</key>
 <dict>
