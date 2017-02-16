@@ -41,6 +41,12 @@
             imageUrl = [productObject objectForKey:@"thumbnail_url"];
         }
         
+        //For Outfit results, we have to show Preview Image
+        if(imageUrl == nil || [imageUrl isKindOfClass:[NSNull class]] || imageUrl.length == 0) {
+            imageUrl = [productObject objectForKey:@"previewImage"][@"previewImage"];
+        }
+
+        
         if(imageUrl != nil && imageUrl.length > 0){
             //Image download code
             [self.firstShopImageView setImageWithURL:[NSURL URLWithString:imageUrl]];
@@ -128,6 +134,12 @@
             if (imageUrl == nil || [imageUrl isKindOfClass:[NSNull class]] || imageUrl.length == 0) {
                 imageUrl = [productObject objectForKey:@"thumbnail_url"];
             }
+            
+            //For Outfit results, we have to show Preview Image
+            if(imageUrl == nil || [imageUrl isKindOfClass:[NSNull class]] || imageUrl.length == 0) {
+                imageUrl = [productObject objectForKey:@"previewImage"][@"previewImage"];
+            }
+
             
             if(imageUrl != nil && imageUrl.length > 0){
                 [self.secondShopImageView setImageWithURL:[NSURL URLWithString:imageUrl]];
