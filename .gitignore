@@ -1,0 +1,15 @@
+.DS_Store
+
+# Xcode
+xcuserdata
+*.xccheckout
+DerivedData
+*.xccheckout
+*.xcscheme
+*.xcuserstate
+xcschememanagement.plist
+**/Pods/
+**/Podfile.lock
+PiQAlikeExample/build/**
+PiQAlikeExample/Output/**
+PiQAlikeExample/Documentation/**
