@@ -218,6 +218,7 @@
 
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
     self.firstShopImageView.image = nil;
     self.secondShopImageView.image = nil;
     self.firstBrandLabel.text = nil;

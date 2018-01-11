@@ -366,4 +366,21 @@ typedef void (^PiQAlikeSearchSimilarFailureBlock)(NSError* _Nullable errorObj);
  *                         in failureBlock's argument
  */
 - (void)getVisuallySimilarProductsFor:(NSString* _Nonnull)inProductID withCompletionBlock:(PiQAlikeSearchSimilarCompletionBlock _Nonnull)inCompletionBlock andFailureBlock:(PiQAlikeSearchSimilarFailureBlock _Nullable)inFailureBlock;
+
+/*!
+ * @brief Call this method to get a list of outfits/looks for a particular product
+ *
+ * @discussion
+ * Typically all of client's data is indexed by the visual search engine. So, client application can
+ * just pass the productID(unique identifier for a product according to client's data) as input param
+ * and a response string will passed in completionBlock which contains all outfits made with that input product.
+ * In case of failure, error object wil be passed in FailureBlock
+ *
+ * @param inProductID : The unique identifier of the product for which visually similar products are being fetched
+ * @param inCompletionBlock : When outfits are successfully fetched, the response Json object in string format
+ *                            is passed as input param in completionBlock's argument
+ * @param inFailureBlock : When fetching outfits fails for any reason, a NSError object is passed
+ *                         in failureBlock's argument
+ */
+- (void)getOutfitsFor:(NSString* _Nonnull)inProductID withCompletionBlock:(PiQAlikeSearchSimilarCompletionBlock _Nonnull)inCompletionBlock andFailureBlock:(PiQAlikeSearchSimilarFailureBlock _Nullable)inFailureBlock;
 @end

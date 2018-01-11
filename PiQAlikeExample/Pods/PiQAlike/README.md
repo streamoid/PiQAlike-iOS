@@ -80,6 +80,36 @@ Once you have finished installing PiQAlike via CocoaPods or framework, you can t
 ```
 Launch your application and verify that the connection is successful. You are now ready to begin visual search.
 
+### To open visual search camera
+
+```sh
+[[PiQAlikeClient sharedClient] showIRScreenWithDetails:nil];
+```
+
+To customize the UI of camera screen, please make a dictionary with keys provided in `PiQAlikeClient.h` and pass the dictionary as input parameter in `showIRScreenWithDetails:` method 
+
+### To get products visually similar for a productID
+
+```sh
+[[PiQAlikeClient sharedClient] getVisuallySimilarProductsFor:PRODUCTID withCompletionBlock:^(NSString * _Nullable responseString) {
+//SUCCESS BLOCK
+} andFailureBlock:^(NSError * _Nullable errorObj) {
+//FAILURE BLOCK
+}];
+```
+
+### To get outfit recommendations for a productID
+
+```sh
+[[PiQAlikeClient sharedClient] getOutfitsFor:PRODUCTID withCompletionBlock:^(NSString * _Nullable responseString) {
+//SUCCESS BLOCK
+} andFailureBlock:^(NSError * _Nullable errorObj) {
+//FAILURE BLOCK
+}];
+```
+
+
+
 ### Contact
 
 You can reach the Streamoid team at any time by emailing support@streamoid.com.
